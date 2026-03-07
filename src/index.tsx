@@ -1,12 +1,18 @@
 import { Hono } from 'hono'
 import { serveStatic } from 'hono/cloudflare-workers'
+import { adminHtml } from './admin'
 
 const app = new Hono()
 
 app.use('/static/*', serveStatic({ root: './public' }))
 
+/* ── PAINEL ADMIN ── */
+app.get('/admin', (c) => {
+  return c.html(adminHtml())
+})
+
 app.get('/', (c) => {
-  const whatsappNumber = '5535999999999' // Substitua pelo número real
+  const whatsappNumber = '5535999999999' // Valor padrão — editado pelo admin
   const whatsappMsg = encodeURIComponent('Olá! Tenho interesse no Fixador de Porcelanato da Pousinox. Pode me ajudar?')
   const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${whatsappMsg}`
 

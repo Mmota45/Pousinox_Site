@@ -1,7 +1,118 @@
 /* ============================================
    POUSINOX - Fixador de Porcelanato
-   JavaScript Principal
+   JavaScript Principal + Integração Admin
    ============================================ */
+
+/* ────────────────────────────────────────────
+   APPLY ADMIN CONFIG
+   Lê a configuração salva pelo painel admin e
+   aplica dinamicamente na landing page.
+──────────────────────────────────────────── */
+(function applyAdminConfig() {
+  try {
+    const raw = localStorage.getItem('pousinox_config');
+    if (!raw) return;
+    const cfg = JSON.parse(raw);
+
+    /* ── WHATSAPP ── */
+    if (cfg.whatsapp?.numero) {
+      const num = cfg.whatsapp.numero.replace(/\D/g, '');
+      const msg = encodeURIComponent(cfg.whatsapp.mensagem || 'Olá! Tenho interesse no Fixador de Porcelanato da Pousinox. Pode me ajudar?');
+      const newUrl = 'https://wa.me/' + num + '?text=' + msg;
+
+      // Atualiza todos os links de WhatsApp na página
+      document.querySelectorAll('a[href*="wa.me"]').forEach(function(el) {
+        el.href = newUrl;
+      });
+    }
+
+    /* ── IMAGENS ── */
+    var imgMap = {
+      'hero':                 { selector: '.hero-img-placeholder', imgClass: 'hero-img', alt: 'Instalação fixador de porcelanato', cls: 'hero-img' },
+      'etapa1':               { selector: '[aria-label="Imagem: preparação do porcelanato com esmerilhadeira"]', imgClass: 'etapa-img', alt: 'Preparação do porcelanato' },
+      'etapa2':               { selector: '[aria-label="Imagem: aplicação do fixador metálico com argamassa"]', imgClass: 'etapa-img', alt: 'Aplicação do fixador' },
+      'etapa3':               { selector: '[aria-label="Imagem: placas preparadas com fixadores posicionados"]', imgClass: 'etapa-img', alt: 'Placas preparadas' },
+      'etapa4':               { selector: '[aria-label="Imagem: fixação do porcelanato na parede com bucha prego"]', imgClass: 'etapa-img', alt: 'Fixação na parede' },
+      'produto_specs':        { selector: '.specs-product-img-placeholder', imgClass: 'specs-product-img', alt: 'Fixador de Porcelanato Pousinox' },
+      'produto_destaque':     { selector: '.produto-img-placeholder', imgClass: 'produto-img-main', alt: 'Produto fixador de porcelanato' },
+      'aplic_fachada':        { selector: '[aria-label="Aplicação em fachadas"]', imgClass: 'aplicacao-img', alt: 'Fachadas externas' },
+      'aplic_interna':        { selector: '[aria-label="Aplicação em paredes internas"]', imgClass: 'aplicacao-img', alt: 'Paredes internas e externas' },
+      'aplic_externa':        { selector: '[aria-label="Aplicação em áreas externas"]', imgClass: 'aplicacao-img', alt: 'Áreas externas' },
+      'aplic_residencial':    { selector: '[aria-label="Aplicação em obras residenciais"]', imgClass: 'aplicacao-img', alt: 'Obras residenciais' },
+      'aplic_comercial':      { selector: '[aria-label="Aplicação em obras comerciais"]', imgClass: 'aplicacao-img', alt: 'Obras comerciais' },
+      'aplic_grande_formato': { selector: '[aria-label="Aplicação em porcelanatos de grande formato"]', imgClass: 'aplicacao-img', alt: 'Grande formato' }
+    };
+
+    if (cfg.imagens) {
+      var imgKeys = Object.keys(cfg.imagens);
+      for (var ik = 0; ik < imgKeys.length; ik++) {
+        var imgKey = imgKeys[ik];
+        var imgUrl = cfg.imagens[imgKey];
+        if (!imgUrl) continue;
+        var imgMap2 = imgMap[imgKey];
+        if (!imgMap2) continue;
+        var placeholder = document.querySelector(imgMap2.selector);
+        if (!placeholder) continue;
+        var img = document.createElement('img');
+        img.src = imgUrl;
+        img.alt = imgMap2.alt;
+        img.className = imgMap2.imgClass;
+        img.loading = 'lazy';
+        img.style.cssText = 'width:100%;height:100%;object-fit:cover;display:block;';
+        (function(el){ el.onerror = function() { el.remove(); }; })(img);
+        if (placeholder.parentNode) placeholder.parentNode.replaceChild(img, placeholder);
+      }
+    }
+
+    /* ── VÍDEOS ── */
+    var videoMap = {
+      'principal':  0,
+      'preparacao': 1,
+      'aplicacao':  2,
+      'obra_real':  3
+    };
+
+    if (cfg.videos) {
+      var videoPlaceholders = document.querySelectorAll('.video-embed-placeholder');
+      var vidKeys = Object.keys(cfg.videos);
+      for (var vk = 0; vk < vidKeys.length; vk++) {
+        var vidKey = vidKeys[vk];
+        var rawUrl = cfg.videos[vidKey];
+        if (!rawUrl) continue;
+        var vidIdx = videoMap[vidKey];
+        if (vidIdx === undefined) continue;
+        var vidPlaceholder = videoPlaceholders[vidIdx];
+        if (!vidPlaceholder) continue;
+        var embedUrl = buildEmbedUrl(rawUrl);
+        vidPlaceholder.setAttribute('data-video-url', embedUrl);
+      }
+    }
+
+  } catch (e) {
+    console.warn('[Pousinox] Erro ao aplicar configuração do admin:', e);
+  }
+
+  function buildEmbedUrl(url) {
+    if (!url) return '';
+    if (url.includes('youtube.com/embed/')) return url;
+    var patterns = [
+      /(?:youtube\.com\/watch\?v=|youtu\.be\/|youtube\.com\/embed\/|youtube\.com\/shorts\/)([a-zA-Z0-9_-]{11})/,
+      /v=([a-zA-Z0-9_-]{11})/
+    ];
+    for (var i = 0; i < patterns.length; i++) {
+      var m = url.match(patterns[i]);
+      if (m) return 'https://www.youtube.com/embed/' + m[1] + '?rel=0';
+    }
+    return url;
+  }
+})();
+
+/* Ouve atualizações do admin em tempo real (quando aberto em outra aba) */
+window.addEventListener('message', function(e) {
+  if (e.data && e.data.type === 'POUSINOX_CONFIG_UPDATE') {
+    location.reload();
+  }
+});
 
 document.addEventListener('DOMContentLoaded', function () {
 
