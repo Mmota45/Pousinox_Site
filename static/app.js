@@ -239,23 +239,39 @@ document.addEventListener('DOMContentLoaded', function () {
   /* ---- FORM SUBMIT ---- */
   const leadForm = document.getElementById('lead-form');
   if (leadForm) {
-    leadForm.addEventListener('submit', function (e) {
+    leadForm.addEventListener('submit', async function (e) {
       e.preventDefault();
       const btn = this.querySelector('[type="submit"]');
-      const orig = btn.textContent;
-      btn.textContent = 'Enviando...';
+      const orig = btn.innerHTML;
+      btn.innerHTML = 'Enviando...';
       btn.disabled = true;
-      // Simula envio - integrar com backend real
-      setTimeout(() => {
-        btn.textContent = '✓ Mensagem enviada!';
-        btn.style.background = '#10b981';
-        setTimeout(() => {
-          btn.textContent = orig;
-          btn.disabled = false;
-          btn.style.background = '';
+
+      const formData = new FormData(this);
+
+      try {
+        const res = await fetch('https://formsubmit.co/adm@pousinox.com.br', {
+          method: 'POST',
+          body: formData,
+          headers: { 'Accept': 'application/json' }
+        });
+
+        if (res.ok) {
+          btn.innerHTML = '✓ Mensagem enviada!';
+          btn.style.background = '#10b981';
           leadForm.reset();
-        }, 3000);
-      }, 1500);
+        } else {
+          throw new Error();
+        }
+      } catch {
+        btn.innerHTML = '✗ Erro — tente pelo WhatsApp';
+        btn.style.background = '#ef4444';
+      }
+
+      setTimeout(() => {
+        btn.innerHTML = orig;
+        btn.disabled = false;
+        btn.style.background = '';
+      }, 4000);
     });
   }
 
