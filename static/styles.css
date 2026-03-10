@@ -125,9 +125,9 @@ h1, h2, h3, h4, h5 {
 }
 
 .btn-primary {
-  background: var(--accent);
+  background: linear-gradient(135deg, #5a5a5a, #888888, #5a5a5a);
   color: var(--white);
-  box-shadow: 0 4px 15px rgba(249, 115, 22, 0.3);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
 .btn-primary:hover {
@@ -309,9 +309,9 @@ h1, h2, h3, h4, h5 {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background: var(--primary);
-  border: 1px solid rgba(255,255,255,0.1);
-  color: rgba(255,255,255,0.85);
+  background: linear-gradient(135deg, #6b6b6b, #9a9a9a, #7a7a7a);
+  border: 1px solid rgba(255,255,255,0.3);
+  color: #ffffff;
   font-size: 0.75rem;
   font-weight: 600;
   letter-spacing: 0.1em;
@@ -1625,14 +1625,14 @@ h1, h2, h3, h4, h5 {
 .footer {
   background: #f8f9fa;
   border-top: 1px solid rgba(0,0,0,0.08);
-  padding: 60px 0 30px;
+  padding: 36px 0 20px;
 }
 
 .footer-grid {
   display: grid;
   grid-template-columns: 2fr 1fr 1fr;
-  gap: 60px;
-  margin-bottom: 48px;
+  gap: 40px;
+  margin-bottom: 28px;
 }
 
 .footer-brand .brand-name {
