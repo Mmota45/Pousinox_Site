@@ -497,12 +497,13 @@ h1, h2, h3, h4, h5 {
   align-items: center;
   gap: 12px;
   z-index: 3;
+  animation: float-badge 3s ease-in-out infinite;
 }
 
 .hero-badge-float .badge-icon {
   width: 44px;
   height: 44px;
-  background: linear-gradient(135deg, #e8751a, #f59e0b);
+  background: linear-gradient(135deg, #5a5a5a, #9a9a9a, #6b6b6b);
   border-radius: 10px;
   display: flex;
   align-items: center;
