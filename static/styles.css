@@ -7,7 +7,7 @@
   /* ── Nova Paleta Clean Pousinox ── */
   --primary: #111111;
   --secondary: #1A1A1A;
-  --accent: #F97316;
+  --accent: #6b6b6b;
   --accent-blue: #1D4ED8;
   --inox: #6B7280;
   --inox-light: #9CA3AF;
@@ -26,7 +26,7 @@
   --success: #10b981;
   /* Hero: fundo branco quente, não mais azul-escuro */
   --gradient-hero: linear-gradient(160deg, #111111 0%, #1A1A1A 60%, #222222 100%);
-  --gradient-accent: linear-gradient(135deg, #F97316, #FB923C);
+  --gradient-accent: linear-gradient(135deg, #5a5a5a, #888888, #5a5a5a);
   --gradient-inox: linear-gradient(135deg, #6B7280, #9CA3AF, #D1D5DB);
   --shadow-sm: 0 1px 3px rgba(0,0,0,0.08), 0 1px 2px rgba(0,0,0,0.12);
   --shadow-md: 0 4px 6px rgba(0,0,0,0.06), 0 2px 4px rgba(0,0,0,0.04);
@@ -73,8 +73,8 @@ h1, h2, h3, h4, h5 {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background: rgba(249, 115, 22, 0.08);
-  border: 1px solid rgba(249, 115, 22, 0.25);
+  background: rgba(107,107,107,0.08);
+  border: 1px solid rgba(107,107,107,0.25);
   color: var(--accent);
   font-size: 0.75rem;
   font-weight: 600;
@@ -131,9 +131,9 @@ h1, h2, h3, h4, h5 {
 }
 
 .btn-primary:hover {
-  background: #EA6B0E;
+  background: #6b6b6b;
   transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(249, 115, 22, 0.4);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
 }
 
 .btn-whatsapp {
@@ -280,7 +280,7 @@ h1, h2, h3, h4, h5 {
   position: absolute;
   inset: 0;
   background: 
-    radial-gradient(circle at 20% 50%, rgba(249, 115, 22, 0.04) 0%, transparent 50%),
+    radial-gradient(circle at 20% 50%, rgba(107,107,107,0.04) 0%, transparent 50%),
     radial-gradient(circle at 80% 20%, rgba(29, 78, 216, 0.03) 0%, transparent 50%);
 }
 
@@ -375,8 +375,8 @@ h1, h2, h3, h4, h5 {
 .hero-bullets .bullet-icon {
   width: 28px;
   height: 28px;
-  background: rgba(249, 115, 22, 0.1);
-  border: 1px solid rgba(249, 115, 22, 0.3);
+  background: rgba(107,107,107,0.1);
+  border: 1px solid rgba(0,0,0,0.15);
   border-radius: 6px;
   display: flex;
   align-items: center;
@@ -576,7 +576,7 @@ h1, h2, h3, h4, h5 {
   left: 0;
   right: 0;
   height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(232,117,26,0.5), transparent);
+  background: linear-gradient(90deg, transparent, rgba(107,107,107,0.4), transparent);
 }
 
 .problema-header {
@@ -671,8 +671,8 @@ h1, h2, h3, h4, h5 {
 
 .problema-solution {
   display: none;
-  background: rgba(249, 115, 22, 0.06);
-  border: 1px solid rgba(249, 115, 22, 0.2);
+  background: rgba(107,107,107,0.06);
+  border: 1px solid rgba(107, 107, 107, 0.25);
   border-radius: var(--border-radius-lg);
   padding: 48px;
   display: grid;
@@ -712,7 +712,7 @@ h1, h2, h3, h4, h5 {
 .solution-feature .sf-icon {
   width: 36px;
   height: 36px;
-  background: rgba(249, 115, 22, 0.12);
+  background: rgba(107, 107, 107, 0.1);
   border-radius: 8px;
   display: flex;
   align-items: center;
@@ -764,7 +764,7 @@ h1, h2, h3, h4, h5 {
   left: calc(12.5% + 20px);
   right: calc(12.5% + 20px);
   height: 2px;
-  background: linear-gradient(90deg, var(--accent), #FB923C);
+  background: linear-gradient(90deg, var(--accent), #6b6b6b);
   z-index: 0;
 }
 
@@ -788,7 +788,7 @@ h1, h2, h3, h4, h5 {
 .etapa-card:hover {
   transform: translateY(-6px);
   box-shadow: 0 12px 30px rgba(0,0,0,0.10);
-  border-color: rgba(249, 115, 22, 0.3);
+  border-color: rgba(0,0,0,0.15);
 }
 
 .etapa-number-wrap {
@@ -801,7 +801,7 @@ h1, h2, h3, h4, h5 {
 .etapa-number {
   width: 38px;
   height: 38px;
-  background: var(--accent);
+  background: linear-gradient(135deg, #5a5a5a, #888888, #5a5a5a);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -809,7 +809,7 @@ h1, h2, h3, h4, h5 {
   font-size: 1.1rem;
   font-weight: 800;
   color: var(--white);
-  box-shadow: 0 4px 15px rgba(249, 115, 22, 0.3);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.15);
   position: relative;
   z-index: 2;
 }
@@ -908,7 +908,7 @@ h1, h2, h3, h4, h5 {
 }
 
 .video-card:hover {
-  border-color: rgba(249, 115, 22, 0.3);
+  border-color: rgba(0,0,0,0.15);
   transform: translateY(-4px);
   box-shadow: 0 20px 40px rgba(0,0,0,0.15);
 }
@@ -952,14 +952,14 @@ h1, h2, h3, h4, h5 {
   transform: translate(-50%, -50%);
   width: 70px;
   height: 70px;
-  background: var(--accent);
+  background: linear-gradient(135deg, #5a5a5a, #888888, #5a5a5a);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   transition: var(--transition);
   backdrop-filter: blur(10px);
-  box-shadow: 0 8px 30px rgba(249, 115, 22, 0.4);
+  box-shadow: 0 8px 30px rgba(0,0,0,0.15);
 }
 
 .play-btn svg {
@@ -1002,7 +1002,7 @@ h1, h2, h3, h4, h5 {
 
 .video-tag {
   display: inline-block;
-  background: rgba(249, 115, 22, 0.1);
+  background: rgba(107,107,107,0.1);
   color: var(--accent);
   font-size: 0.7rem;
   font-weight: 600;
@@ -1051,7 +1051,7 @@ h1, h2, h3, h4, h5 {
 .beneficio-icon {
   width: 48px;
   height: 48px;
-  background: rgba(249, 115, 22, 0.08);
+  background: rgba(107,107,107,0.08);
   border-radius: 10px;
   display: flex;
   align-items: center;
@@ -1174,8 +1174,8 @@ h1, h2, h3, h4, h5 {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  background: rgba(249, 115, 22, 0.12);
-  border: 1px solid rgba(249, 115, 22, 0.25);
+  background: rgba(107, 107, 107, 0.1);
+  border: 1px solid rgba(107,107,107,0.25);
   color: var(--accent);
   font-size: 0.75rem;
   font-weight: 600;
@@ -1209,7 +1209,7 @@ h1, h2, h3, h4, h5 {
 }
 
 .specs-table thead th {
-  background: rgba(249, 115, 22, 0.12);
+  background: rgba(107, 107, 107, 0.1);
   color: var(--accent);
   font-size: 0.75rem;
   text-transform: uppercase;
@@ -1255,8 +1255,8 @@ h1, h2, h3, h4, h5 {
 }
 
 .specs-table tbody td .tag {
-  background: rgba(249, 115, 22, 0.12);
-  border: 1px solid rgba(249, 115, 22, 0.25);
+  background: rgba(107, 107, 107, 0.1);
+  border: 1px solid rgba(107,107,107,0.25);
   color: var(--accent);
   font-size: 0.75rem;
   padding: 3px 10px;
@@ -1433,7 +1433,7 @@ h1, h2, h3, h4, h5 {
   bottom: 24px;
   right: 24px;
   background: var(--primary);
-  border: 1px solid rgba(249, 115, 22, 0.3);
+  border: 1px solid rgba(0,0,0,0.15);
   border-radius: 10px;
   padding: 14px 20px;
 }
@@ -1538,7 +1538,7 @@ h1, h2, h3, h4, h5 {
   position: absolute;
   inset: 0;
   background: 
-    radial-gradient(circle at 30% 50%, rgba(249,115,22,0.12) 0%, transparent 60%),
+    radial-gradient(circle at 30% 50%, rgba(107, 107, 107, 0.1) 0%, transparent 60%),
     radial-gradient(circle at 70% 50%, rgba(249,115,22,0.06) 0%, transparent 60%);
 }
 
