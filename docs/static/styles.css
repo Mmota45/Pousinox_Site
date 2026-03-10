@@ -1272,7 +1272,7 @@ h1, h2, h3, h4, h5 {
 /* ============ APLICAÇÕES ============ */
 .section-aplicacoes {
   padding: 100px 0;
-  background: #f8f9fa;
+  background: #ffffff;
 }
 
 .aplicacoes-header {
@@ -1383,7 +1383,7 @@ h1, h2, h3, h4, h5 {
 /* ============ PRODUTO ============ */
 .section-produto {
   padding: 100px 0;
-  background: #ffffff;
+  background: #f8f9fa;
 }
 
 .produto-layout {
