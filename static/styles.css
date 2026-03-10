@@ -1996,12 +1996,10 @@ h1, h2, h3, h4, h5 {
 
 .footer-bottom {
   border-top: 1px solid rgba(0,0,0,0.08);
-  padding-top: 24px;
+  padding-top: 20px;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 12px;
+  flex-direction: column;
+  gap: 8px;
 }
 
 .footer-bottom p {
@@ -2010,11 +2008,11 @@ h1, h2, h3, h4, h5 {
 }
 
 .footer-seo-keywords {
-  font-size: 0.7rem;
-  color: #aaa;
-  max-width: 600px;
-  text-align: right;
-  line-height: 1.4;
+  font-size: 0.68rem;
+  color: #bbb;
+  text-align: left;
+  line-height: 1.5;
+  letter-spacing: 0.01em;
 }
 
 /* ============ WHATSAPP FLOAT ============ */
@@ -2249,11 +2247,11 @@ h1, h2, h3, h4, h5 {
 
   .footer-bottom {
     flex-direction: column;
-    text-align: center;
+    text-align: left;
   }
 
   .footer-seo-keywords {
-    text-align: center;
+    text-align: left;
   }
 
   .cta-guarantees {
