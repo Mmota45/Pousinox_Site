@@ -187,9 +187,9 @@ h1, h2, h3, h4, h5 {
   background: rgba(255,255,255,0.97);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
-  border-bottom: 1px solid var(--gray-200);
+  border-bottom: none;
   transition: var(--transition);
-  box-shadow: 0 1px 0 rgba(0,0,0,0.06);
+  box-shadow: none;
 }
 
 .navbar-inner {
