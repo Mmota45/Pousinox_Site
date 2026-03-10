@@ -457,8 +457,9 @@ h1, h2, h3, h4, h5 {
   height: 500px;
   object-fit: contain;
   display: block;
-  background: transparent;
+  background: var(--off-white);
   padding: 24px;
+  mix-blend-mode: multiply;
 }
 
 .hero-img-placeholder {
