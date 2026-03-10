@@ -324,7 +324,7 @@ h1, h2, h3, h4, h5 {
 .hero-badge-dot {
   width: 6px;
   height: 6px;
-  background: var(--accent);
+  background: #3b82f6;
   border-radius: 50%;
   animation: pulse-dot 2s infinite;
 }
