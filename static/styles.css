@@ -490,9 +490,10 @@ h1, h2, h3, h4, h5 {
   position: absolute;
   bottom: -20px;
   left: -20px;
-  background: white;
+  background: var(--accent-blue);
+  border: 1px solid rgba(255,255,255,0.2);
   border-radius: 12px;
-  padding: 16px 20px;
+  padding: 14px 18px;
   box-shadow: var(--shadow-xl);
   display: flex;
   align-items: center;
@@ -502,9 +503,9 @@ h1, h2, h3, h4, h5 {
 }
 
 .hero-badge-float .badge-icon {
-  width: 44px;
-  height: 44px;
-  background: linear-gradient(135deg, #5a5a5a, #9a9a9a, #6b6b6b);
+  width: 38px;
+  height: 38px;
+  background: rgba(255,255,255,0.15);
   border-radius: 10px;
   display: flex;
   align-items: center;
@@ -512,8 +513,8 @@ h1, h2, h3, h4, h5 {
 }
 
 .hero-badge-float .badge-icon svg {
-  width: 22px;
-  height: 22px;
+  width: 20px;
+  height: 20px;
   color: white;
   fill: none;
   stroke: currentColor;
@@ -524,14 +525,14 @@ h1, h2, h3, h4, h5 {
 
 .hero-badge-float .badge-text strong {
   display: block;
-  font-size: 1rem;
+  font-size: 0.9rem;
   font-weight: 700;
-  color: var(--gray-900);
+  color: white;
 }
 
 .hero-badge-float .badge-text span {
-  font-size: 0.75rem;
-  color: var(--gray-600);
+  font-size: 0.7rem;
+  color: rgba(255,255,255,0.8);
 }
 
 .hero-badge-float2 {
@@ -637,22 +638,23 @@ h1, h2, h3, h4, h5 {
 .problema-card-icon {
   width: 34px;
   height: 34px;
-  background: rgba(239, 68, 68, 0.1);
-  border: 1px solid rgba(239, 68, 68, 0.2);
+  background: linear-gradient(135deg, #5a5a5a, #9a9a9a, #6b6b6b);
+  border: none;
   border-radius: 12px;
   display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.18);
 }
 
 .problema-card-icon svg {
-  width: 26px;
-  height: 26px;
-  color: #ef4444;
+  width: 20px;
+  height: 20px;
+  color: white;
   fill: none;
   stroke: currentColor;
-  stroke-width: 2;
+  stroke-width: 2.2;
   stroke-linecap: round;
   stroke-linejoin: round;
 }
