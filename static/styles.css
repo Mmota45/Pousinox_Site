@@ -443,8 +443,9 @@ h1, h2, h3, h4, h5 {
   position: relative;
   border-radius: var(--border-radius-lg);
   overflow: hidden;
-  box-shadow: 0 20px 60px rgba(0,0,0,0.12);
+  box-shadow: 0 20px 60px rgba(0,0,0,0.08);
   border: 1px solid var(--gray-200);
+  background: #ffffff;
 }
 
 .hero-image-frame::before {
@@ -456,7 +457,7 @@ h1, h2, h3, h4, h5 {
   height: 500px;
   object-fit: contain;
   display: block;
-  background: #f8f9fa;
+  background: #ffffff;
   padding: 24px;
 }
 
@@ -1128,7 +1129,8 @@ h1, h2, h3, h4, h5 {
   background: #ffffff;
   border: 1px solid rgba(0,0,0,0.08);
   border-radius: var(--border-radius-lg);
-  padding: 20px;
+  padding: 16px;
+  text-align: center;
   text-align: center;
   backdrop-filter: blur(10px);
 }
