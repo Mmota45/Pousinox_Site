@@ -174,92 +174,105 @@ h1, h2, h3, h4, h5 {
   font-size: 1.05rem;
 }
 
-/* ============ NAVBAR ============ */
+/* ============ NAVBAR (STYLE PRO) ============ */
 .navbar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 1000;
-  background: rgba(15, 15, 26, 0.95);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border-bottom: 1px solid rgba(255,255,255,0.08);
-  transition: var(--transition);
+position: fixed;
+top: 0;
+left: 0;
+right: 0;
+z-index: 1000;
+
+/* fundo mais elegante */
+background: rgba(11, 15, 26, 0.92);
+
+/* efeito glass */
+backdrop-filter: blur(16px);
+-webkit-backdrop-filter: blur(16px);
+
+/* linha inferior ultra suave (estilo Stripe) */
+border-bottom: 1px solid rgba(255,255,255,0.05);
+
+/* sombra muito leve */
+box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+
+transition: var(--transition);
 }
 
 .navbar-inner {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 16px 20px;
-  max-width: 1200px;
-  margin: 0 auto;
+display: flex;
+align-items: center;
+justify-content: space-between;
+padding: 16px 20px;
+max-width: 1200px;
+margin: 0 auto;
 }
 
 .navbar-brand {
-  display: flex;
-  flex-direction: column;
-  text-decoration: none;
+display: flex;
+flex-direction: column;
+text-decoration: none;
 }
 
 .navbar-brand .brand-name {
-  font-size: 1.3rem;
-  font-weight: 800;
-  color: var(--white);
-  letter-spacing: -0.02em;
-  background: var(--gradient-inox);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+font-size: 1.3rem;
+font-weight: 800;
+color: var(--white);
+letter-spacing: -0.02em;
+
+background: var(--gradient-inox);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+background-clip: text;
 }
 
 .navbar-brand .brand-tagline {
-  font-size: 0.65rem;
-  color: var(--inox);
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
+font-size: 0.65rem;
+color: var(--inox);
+letter-spacing: 0.15em;
+text-transform: uppercase;
 }
 
 .navbar-nav {
-  display: flex;
-  align-items: center;
-  gap: 32px;
-  list-style: none;
+display: flex;
+align-items: center;
+gap: 32px;
+list-style: none;
 }
 
 .navbar-nav a {
-  color: var(--inox-light);
-  text-decoration: none;
-  font-size: 0.875rem;
-  font-weight: 500;
-  transition: var(--transition);
+color: var(--inox-light);
+text-decoration: none;
+font-size: 0.875rem;
+font-weight: 500;
+transition: var(--transition);
 }
 
+/* hover mais suave e moderno */
 .navbar-nav a:hover {
-  color: var(--white);
+color: var(--white);
+opacity: 0.9;
 }
 
 .navbar-cta {
-  display: flex;
-  align-items: center;
-  gap: 12px;
+display: flex;
+align-items: center;
+gap: 12px;
 }
 
 .hamburger {
-  display: none;
-  flex-direction: column;
-  gap: 5px;
-  cursor: pointer;
-  padding: 4px;
+display: none;
+flex-direction: column;
+gap: 5px;
+cursor: pointer;
+padding: 4px;
 }
 
 .hamburger span {
-  width: 24px;
-  height: 2px;
-  background: var(--white);
-  border-radius: 2px;
-  transition: var(--transition);
+width: 24px;
+height: 2px;
+background: var(--white);
+border-radius: 2px;
+transition: var(--transition);
 }
 
 /* ============ HERO ============ */
