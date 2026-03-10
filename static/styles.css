@@ -443,9 +443,9 @@ h1, h2, h3, h4, h5 {
   position: relative;
   border-radius: var(--border-radius-lg);
   overflow: hidden;
-  box-shadow: 0 20px 60px rgba(0,0,0,0.08);
-  border: 1px solid var(--gray-200);
-  background: #ffffff;
+  box-shadow: 0 8px 40px rgba(0,0,0,0.10);
+  border: none;
+  background: transparent;
 }
 
 .hero-image-frame::before {
@@ -457,7 +457,7 @@ h1, h2, h3, h4, h5 {
   height: 500px;
   object-fit: contain;
   display: block;
-  background: #ffffff;
+  background: transparent;
   padding: 24px;
 }
 
