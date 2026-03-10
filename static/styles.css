@@ -265,13 +265,14 @@ h1, h2, h3, h4, h5 {
 
 /* ============ HERO ============ */
 .hero {
-  min-height: 100vh;
+  min-height: auto;
   background: var(--off-white);
   position: relative;
   overflow: hidden;
   display: flex;
   align-items: center;
   padding-top: 80px;
+  padding-bottom: 40px;
 }
 
 .hero::before {
@@ -302,7 +303,7 @@ h1, h2, h3, h4, h5 {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 80px 20px;
+  padding: 40px 20px;
 }
 
 .hero-badge {
