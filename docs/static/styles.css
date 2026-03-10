@@ -742,7 +742,7 @@ h1, h2, h3, h4, h5 {
 /* ============ COMO FUNCIONA ============ */
 .section-como-funciona {
   padding: 100px 0;
-  background: var(--white);
+  background: #ffffff;
 }
 
 .como-header {
@@ -1021,7 +1021,7 @@ h1, h2, h3, h4, h5 {
 /* ============ BENEFÍCIOS ============ */
 .section-beneficios {
   padding: 100px 0;
-  background: var(--off-white);
+  background: #ffffff;
 }
 
 .beneficios-layout {
@@ -1272,7 +1272,7 @@ h1, h2, h3, h4, h5 {
 /* ============ APLICAÇÕES ============ */
 .section-aplicacoes {
   padding: 100px 0;
-  background: var(--white);
+  background: #f8f9fa;
 }
 
 .aplicacoes-header {
@@ -1383,7 +1383,7 @@ h1, h2, h3, h4, h5 {
 /* ============ PRODUTO ============ */
 .section-produto {
   padding: 100px 0;
-  background: var(--off-white);
+  background: #ffffff;
 }
 
 .produto-layout {
