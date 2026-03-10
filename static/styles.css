@@ -599,8 +599,8 @@ h1, h2, h3, h4, h5 {
 }
 
 .problema-card {
-  background: rgba(255,255,255,0.04);
-  border: 1px solid rgba(255,255,255,0.08);
+  background: #ffffff;
+  border: 1px solid rgba(0,0,0,0.08);
   border-radius: var(--border-radius);
   padding: 32px;
   transition: var(--transition);
@@ -626,7 +626,7 @@ h1, h2, h3, h4, h5 {
 }
 
 .problema-card:hover {
-  background: rgba(255,255,255,0.06);
+  background: #fff5f5;
   border-color: rgba(239,68,68,0.2);
   transform: translateY(-4px);
 }
@@ -656,13 +656,13 @@ h1, h2, h3, h4, h5 {
 
 .problema-card h3 {
   font-size: 1.1rem;
-  color: var(--white);
+  color: #111111;
   margin-bottom: 10px;
 }
 
 .problema-card p {
   font-size: 0.9rem;
-  color: rgba(255,255,255,0.55);
+  color: #555;
   line-height: 1.6;
 }
 
@@ -679,7 +679,7 @@ h1, h2, h3, h4, h5 {
 
 .solution-text h3 {
   font-size: 1.6rem;
-  color: var(--white);
+  color: #111111;
   margin-bottom: 16px;
 }
 
@@ -688,7 +688,7 @@ h1, h2, h3, h4, h5 {
 }
 
 .solution-text p {
-  color: rgba(255,255,255,0.65);
+  color: #555;
   line-height: 1.7;
   font-size: 0.95rem;
 }
@@ -730,13 +730,13 @@ h1, h2, h3, h4, h5 {
 .solution-feature .sf-text strong {
   display: block;
   font-size: 0.9rem;
-  color: var(--white);
+  color: #111111;
   margin-bottom: 2px;
 }
 
 .solution-feature .sf-text span {
   font-size: 0.8rem;
-  color: rgba(255,255,255,0.5);
+  color: #666;
 }
 
 /* ============ COMO FUNCIONA ============ */
@@ -996,13 +996,13 @@ h1, h2, h3, h4, h5 {
 
 .video-info h4 {
   font-size: 1rem;
-  color: var(--white);
+  color: #111111;
   margin-bottom: 6px;
 }
 
 .video-info p {
   font-size: 0.8rem;
-  color: rgba(255,255,255,0.5);
+  color: #666;
 }
 
 .video-tag {
@@ -1623,8 +1623,8 @@ h1, h2, h3, h4, h5 {
 
 /* ============ FOOTER ============ */
 .footer {
-  background: #0A0A0A;
-  border-top: 1px solid rgba(255,255,255,0.07);
+  background: #f8f9fa;
+  border-top: 1px solid rgba(0,0,0,0.08);
   padding: 60px 0 30px;
 }
 
@@ -1638,13 +1638,13 @@ h1, h2, h3, h4, h5 {
 .footer-brand .brand-name {
   font-size: 1.5rem;
   font-weight: 800;
-  color: var(--white);
+  color: #111111;
   margin-bottom: 8px;
 }
 
 .footer-brand .brand-tagline {
   font-size: 0.75rem;
-  color: var(--inox);
+  color: #666;
   letter-spacing: 0.12em;
   text-transform: uppercase;
   margin-bottom: 16px;
@@ -1652,7 +1652,7 @@ h1, h2, h3, h4, h5 {
 
 .footer-brand p {
   font-size: 0.875rem;
-  color: rgba(255,255,255,0.4);
+  color: #555;
   line-height: 1.6;
   max-width: 280px;
 }
@@ -1660,7 +1660,7 @@ h1, h2, h3, h4, h5 {
 .footer-col h4 {
   font-size: 0.8rem;
   font-weight: 700;
-  color: var(--white);
+  color: #111111;
   text-transform: uppercase;
   letter-spacing: 0.1em;
   margin-bottom: 20px;
@@ -1675,13 +1675,13 @@ h1, h2, h3, h4, h5 {
 
 .footer-col ul a {
   font-size: 0.875rem;
-  color: rgba(255,255,255,0.4);
+  color: #555;
   text-decoration: none;
   transition: var(--transition);
 }
 
 .footer-col ul a:hover {
-  color: var(--white);
+  color: #111111;
 }
 
 .footer-contact-item {
@@ -1689,7 +1689,7 @@ h1, h2, h3, h4, h5 {
   align-items: center;
   gap: 10px;
   font-size: 0.875rem;
-  color: rgba(255,255,255,0.4);
+  color: #555;
   margin-bottom: 12px;
 }
 
@@ -1701,7 +1701,7 @@ h1, h2, h3, h4, h5 {
 }
 
 .footer-bottom {
-  border-top: 1px solid rgba(255,255,255,0.06);
+  border-top: 1px solid rgba(0,0,0,0.08);
   padding-top: 24px;
   display: flex;
   justify-content: space-between;
@@ -1712,12 +1712,12 @@ h1, h2, h3, h4, h5 {
 
 .footer-bottom p {
   font-size: 0.8rem;
-  color: rgba(255,255,255,0.3);
+  color: #888;
 }
 
 .footer-seo-keywords {
   font-size: 0.7rem;
-  color: rgba(255,255,255,0.15);
+  color: #aaa;
   max-width: 600px;
   text-align: right;
   line-height: 1.4;
