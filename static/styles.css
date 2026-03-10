@@ -488,9 +488,9 @@ h1, h2, h3, h4, h5 {
 
 .hero-badge-float {
   position: absolute;
-  bottom: -20px;
-  left: -20px;
-  background: var(--accent-blue);
+  top: 20px;
+  right: -20px;
+  background: linear-gradient(135deg, #6e6e6e, #b0b0b0, #787878);
   border: 1px solid rgba(255,255,255,0.2);
   border-radius: 12px;
   padding: 14px 18px;
