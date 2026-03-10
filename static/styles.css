@@ -335,10 +335,11 @@ h1, h2, h3, h4, h5 {
 }
 
 .hero-title {
-  font-size: clamp(2.4rem, 5vw, 3.8rem);
+  font-size: clamp(2rem, 4vw, 3rem);
   color: var(--primary);
   margin-bottom: 20px;
-  line-height: 1.1;
+  line-height: 1.15;
+  white-space: nowrap;
 }
 
 .hero-title .highlight {
