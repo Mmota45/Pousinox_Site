@@ -28,13 +28,15 @@
   --success: #10b981;
   /* Gradientes premium */
   --gradient-hero: linear-gradient(160deg, #0a0a0a 0%, #141920 60%, #1a2030 100%);
-  --gradient-accent: linear-gradient(135deg, #4a4a4a 0%, #8C9198 40%, #C8CDD4 60%, #8C9198 80%, #4a4a4a 100%);
-  --gradient-inox: linear-gradient(135deg, #4a4e56, #8C9198, #C8CDD4, #8C9198, #4a4e56);
-  --gradient-gold: linear-gradient(135deg, #a07828, #C9A84C, #e8c878, #C9A84C, #a07828);
-  --shadow-sm: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.16);
-  --shadow-md: 0 4px 12px rgba(0,0,0,0.10), 0 2px 6px rgba(0,0,0,0.08);
-  --shadow-lg: 0 12px 48px rgba(0,0,0,0.14);
-  --shadow-xl: 0 24px 72px rgba(0,0,0,0.18);
+  --gradient-accent: linear-gradient(135deg, #3a3d42 0%, #7a8088 35%, #C8CDD4 55%, #9ca3af 75%, #3a3d42 100%);
+  --gradient-inox: linear-gradient(135deg, #2e3138 0%, #6b7280 35%, #d1d5db 55%, #6b7280 75%, #2e3138 100%);
+  --gradient-gold: linear-gradient(135deg, #8a6520, #C9A84C, #f0d890, #C9A84C, #8a6520);
+  --gradient-dark: linear-gradient(160deg, #0a0a0a 0%, #141920 60%, #1a2030 100%);
+  --shadow-sm: 0 1px 4px rgba(0,0,0,0.14), 0 1px 2px rgba(0,0,0,0.18);
+  --shadow-md: 0 4px 16px rgba(0,0,0,0.13), 0 2px 8px rgba(0,0,0,0.10);
+  --shadow-lg: 0 12px 52px rgba(0,0,0,0.18);
+  --shadow-xl: 0 24px 80px rgba(0,0,0,0.22);
+  --shadow-gold: 0 8px 32px rgba(201,168,76,0.25);
   --border-radius: 10px;
   --border-radius-lg: 18px;
   --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -60,9 +62,9 @@ body {
 
 /* ============ TYPOGRAPHY ============ */
 h1, h2, h3, h4, h5 {
-  font-weight: 800;
-  line-height: 1.15;
-  letter-spacing: -0.03em;
+  font-weight: 900;
+  line-height: 1.1;
+  letter-spacing: -0.04em;
 }
 
 /* ============ UTILITY ============ */
@@ -133,17 +135,36 @@ h1, h2, h3, h4, h5 {
 }
 
 .btn-primary {
-  background: var(--gradient-inox);
-  color: var(--primary);
+  background: linear-gradient(135deg, #1a1d22 0%, #3a3d42 30%, #6b7280 55%, #3a3d42 80%, #1a1d22 100%);
+  color: #f0f0f0;
   font-weight: 700;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.25), inset 0 1px 0 rgba(255,255,255,0.2);
-  letter-spacing: 0.01em;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  font-size: 0.82rem;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.35), inset 0 1px 0 rgba(255,255,255,0.12), inset 0 -1px 0 rgba(0,0,0,0.2);
+  border: 1px solid rgba(200,205,212,0.15);
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-primary::after {
+  content: '';
+  position: absolute;
+  top: 0; left: -100%;
+  width: 60%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.08), transparent);
+  transition: left 0.5s ease;
+}
+
+.btn-primary:hover::after {
+  left: 140%;
 }
 
 .btn-primary:hover {
-  background: linear-gradient(135deg, #5a5e66, #a0a8b0, #dce0e6, #a0a8b0, #5a5e66);
+  background: linear-gradient(135deg, #2a2d32 0%, #4a4d52 30%, #8b9098 55%, #4a4d52 80%, #2a2d32 100%);
   transform: translateY(-2px);
-  box-shadow: 0 10px 32px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.25);
+  box-shadow: 0 12px 36px rgba(0,0,0,0.4), inset 0 1px 0 rgba(255,255,255,0.15);
 }
 
 .btn-whatsapp {
@@ -277,7 +298,7 @@ h1, h2, h3, h4, h5 {
 /* ============ HERO ============ */
 .hero {
   min-height: auto;
-  background: var(--gradient-hero);
+  background: linear-gradient(160deg, #080a0e 0%, #0f1318 50%, #141920 100%);
   position: relative;
   overflow: visible;
   display: flex;
@@ -291,8 +312,9 @@ h1, h2, h3, h4, h5 {
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(ellipse at 70% 50%, rgba(200,205,212,0.06) 0%, transparent 55%),
-    radial-gradient(ellipse at 20% 80%, rgba(201,168,76,0.04) 0%, transparent 50%);
+    radial-gradient(ellipse at 70% 50%, rgba(200,205,212,0.10) 0%, transparent 55%),
+    radial-gradient(ellipse at 10% 30%, rgba(201,168,76,0.06) 0%, transparent 45%),
+    radial-gradient(ellipse at 90% 90%, rgba(140,145,152,0.08) 0%, transparent 40%);
   pointer-events: none;
 }
 
@@ -300,8 +322,8 @@ h1, h2, h3, h4, h5 {
   position: absolute;
   inset: 0;
   background-image:
-    linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+    linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px);
   background-size: 60px 60px;
 }
 
@@ -322,16 +344,17 @@ h1, h2, h3, h4, h5 {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background: linear-gradient(135deg, #6b6b6b, #9a9a9a, #7a7a7a);
-  border: 1px solid rgba(255,255,255,0.3);
-  color: #ffffff;
-  font-size: 0.75rem;
-  font-weight: 600;
-  letter-spacing: 0.1em;
+  background: linear-gradient(135deg, #8a6520, #C9A84C, #f0d890, #C9A84C, #8a6520);
+  border: 1px solid rgba(201,168,76,0.4);
+  color: #0a0a0a;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
-  padding: 8px 16px;
+  padding: 7px 16px;
   border-radius: 100px;
   margin-bottom: 14px;
+  box-shadow: 0 4px 16px rgba(201,168,76,0.3);
 }
 
 .hero-badge-dot {
@@ -1033,8 +1056,9 @@ h1, h2, h3, h4, h5 {
 
 /* ============ BENEFÍCIOS ============ */
 .section-beneficios {
-  padding: 60px 0;
-  background: #ffffff;
+  padding: 80px 0;
+  background: linear-gradient(160deg, #0a0c10 0%, #111520 60%, #161c28 100%);
+  position: relative;
 }
 
 .beneficios-layout {
@@ -1051,69 +1075,74 @@ h1, h2, h3, h4, h5 {
 }
 
 .beneficio-item {
-  background: var(--white);
-  border: 1px solid var(--gray-200);
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.10);
   border-radius: var(--border-radius);
   padding: 24px;
   transition: var(--transition);
-  box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+  backdrop-filter: blur(8px);
 }
 
 .beneficio-item:hover {
-  border-color: var(--accent);
-  transform: translateY(-3px);
-  box-shadow: 0 8px 24px rgba(249,115,22,0.08);
-  background: var(--white);
+  border-color: rgba(201,168,76,0.35);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(0,0,0,0.3);
+  background: rgba(255,255,255,0.07);
 }
 
 .beneficio-icon {
   width: 48px;
   height: 48px;
-  background: rgba(107,107,107,0.08);
+  background: linear-gradient(135deg, #8a6520, #C9A84C, #f0d890, #C9A84C, #8a6520);
   border-radius: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: 14px;
+  box-shadow: 0 4px 16px rgba(201,168,76,0.3);
 }
 
 .beneficio-icon svg {
-  width: 24px;
-  height: 24px;
-  color: var(--accent);
+  width: 22px;
+  height: 22px;
+  color: #0a0a0a;
   fill: none;
   stroke: currentColor;
-  stroke-width: 2;
+  stroke-width: 2.2;
   stroke-linecap: round;
   stroke-linejoin: round;
 }
 
 .beneficio-item h4 {
   font-size: 0.95rem;
-  color: var(--gray-900);
+  color: #ffffff;
   margin-bottom: 6px;
   font-weight: 700;
 }
 
 .beneficio-item p {
   font-size: 0.82rem;
-  color: var(--gray-600);
+  color: rgba(255,255,255,0.6);
   line-height: 1.5;
 }
 
 .beneficios-text h2 {
   font-size: clamp(1.8rem, 3vw, 2.6rem);
-  color: var(--gray-900);
+  color: #ffffff;
   margin-bottom: 20px;
-  line-height: 1.2;
+  line-height: 1.1;
+  letter-spacing: -0.04em;
 }
 
 .beneficios-text h2 span {
-  color: var(--accent);
+  background: linear-gradient(135deg, #C9A84C, #f0d890, #C9A84C);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .beneficios-text p {
-  color: var(--gray-600);
+  color: rgba(255,255,255,0.65);
   line-height: 1.7;
   margin-bottom: 32px;
   font-size: 1rem;
@@ -2151,4 +2180,10 @@ h1, h2, h3, h4, h5 {
     width: 100%;
     justify-content: center;
   }
+}
+
+.section-beneficios .section-tag {
+  background: rgba(201,168,76,0.12);
+  border-color: rgba(201,168,76,0.3);
+  color: #C9A84C;
 }
