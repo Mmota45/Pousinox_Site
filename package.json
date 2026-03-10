@@ -4,8 +4,10 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "build:static": "npx tsx scripts/build-static.ts",
     "preview": "wrangler pages dev",
     "deploy": "npm run build && wrangler pages deploy",
+    "deploy:github": "npm run build:static",
     "cf-typegen": "wrangler types --env-interface CloudflareBindings"
   },
   "dependencies": {

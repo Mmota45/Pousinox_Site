@@ -1,6 +1,9 @@
 # prod
 dist/
 
+# docs/ é gerado pelo build:static e deve ser commitado para GitHub Pages
+# NÃO adicionar docs/ aqui
+
 # dev
 .yarn/
 !.yarn/releases
