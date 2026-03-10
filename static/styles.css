@@ -745,7 +745,7 @@ h1, h2, h3, h4, h5 {
 
 /* ============ COMO FUNCIONA ============ */
 .section-como-funciona {
-  padding: 60px 0;
+  padding: 40px 0;
   background: #ffffff;
 }
 
@@ -794,13 +794,13 @@ h1, h2, h3, h4, h5 {
 .etapa-number-wrap {
   display: flex;
   justify-content: center;
-  padding-top: 28px;
-  padding-bottom: 8px;
+  padding-top: 16px;
+  padding-bottom: 6px;
 }
 
 .etapa-number {
-  width: 48px;
-  height: 48px;
+  width: 38px;
+  height: 38px;
   background: var(--accent);
   border-radius: 50%;
   display: flex;
@@ -815,20 +815,11 @@ h1, h2, h3, h4, h5 {
 }
 
 .etapa-img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
+  display: none;
 }
 
 .etapa-img-placeholder {
-  width: 100%;
-  height: 200px;
-  background: linear-gradient(135deg, var(--gray-100), var(--gray-200));
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
+  display: none;
 }
 
 .etapa-img-placeholder svg {
@@ -844,7 +835,7 @@ h1, h2, h3, h4, h5 {
 }
 
 .etapa-content {
-  padding: 24px;
+  padding: 14px 16px;
 }
 
 .etapa-content h3 {
