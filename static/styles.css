@@ -2187,3 +2187,14 @@ h1, h2, h3, h4, h5 {
   border-color: rgba(201,168,76,0.3);
   color: #C9A84C;
 }
+
+/* Tag Risco Real — vermelho escuro sofisticado */
+.section-tag-danger {
+  background: rgba(153, 27, 27, 0.10);
+  border-color: rgba(153, 27, 27, 0.30);
+  color: #991b1b;
+}
+
+.section-tag-danger i {
+  color: #b91c1c;
+}
