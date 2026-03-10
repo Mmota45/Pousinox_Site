@@ -563,7 +563,7 @@ h1, h2, h3, h4, h5 {
 
 /* ============ PROBLEMA ============ */
 .section-problema {
-  padding: 100px 0;
+  padding: 60px 0;
   background: #f8f9fa;
   position: relative;
   overflow: hidden;
@@ -598,7 +598,7 @@ h1, h2, h3, h4, h5 {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 24px;
-  margin-bottom: 60px;
+  margin-bottom: 36px;
 }
 
 .problema-card {
@@ -744,13 +744,13 @@ h1, h2, h3, h4, h5 {
 
 /* ============ COMO FUNCIONA ============ */
 .section-como-funciona {
-  padding: 100px 0;
+  padding: 60px 0;
   background: #ffffff;
 }
 
 .como-header {
   text-align: center;
-  margin-bottom: 80px;
+  margin-bottom: 36px;
 }
 
 .etapas-container {
@@ -871,7 +871,7 @@ h1, h2, h3, h4, h5 {
 
 /* ============ VÍDEOS ============ */
 .section-videos {
-  padding: 100px 0;
+  padding: 60px 0;
   background: #f8f9fa;
   position: relative;
 }
@@ -888,7 +888,7 @@ h1, h2, h3, h4, h5 {
 
 .videos-header {
   text-align: center;
-  margin-bottom: 60px;
+  margin-bottom: 36px;
 }
 
 .videos-header .section-title {
@@ -1023,7 +1023,7 @@ h1, h2, h3, h4, h5 {
 
 /* ============ BENEFÍCIOS ============ */
 .section-beneficios {
-  padding: 100px 0;
+  padding: 60px 0;
   background: #ffffff;
 }
 
@@ -1111,7 +1111,7 @@ h1, h2, h3, h4, h5 {
 
 /* ============ ESPECIFICAÇÕES ============ */
 .section-specs {
-  padding: 100px 0;
+  padding: 60px 0;
   background: #f8f9fa;
   position: relative;
 }
@@ -1274,13 +1274,13 @@ h1, h2, h3, h4, h5 {
 
 /* ============ APLICAÇÕES ============ */
 .section-aplicacoes {
-  padding: 100px 0;
+  padding: 60px 0;
   background: #ffffff;
 }
 
 .aplicacoes-header {
   text-align: center;
-  margin-bottom: 60px;
+  margin-bottom: 36px;
 }
 
 .aplicacoes-grid {
@@ -1385,7 +1385,7 @@ h1, h2, h3, h4, h5 {
 
 /* ============ PRODUTO ============ */
 .section-produto {
-  padding: 100px 0;
+  padding: 60px 0;
   background: #f8f9fa;
 }
 
@@ -1535,7 +1535,7 @@ h1, h2, h3, h4, h5 {
 
 /* ============ CTA ============ */
 .section-cta {
-  padding: 120px 0;
+  padding: 60px 0;
   background: #1f2937;
   position: relative;
   overflow: hidden;
@@ -1584,7 +1584,7 @@ h1, h2, h3, h4, h5 {
 .cta-content p {
   font-size: 1.15rem;
   color: rgba(255,255,255,0.65);
-  margin-bottom: 48px;
+  margin-bottom: 28px;
   line-height: 1.7;
 }
 
