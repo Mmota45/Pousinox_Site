@@ -781,7 +781,7 @@
             </div>
             <div>
               <div class="contato-info-label">Endereço</div>
-              <div class="contato-info-value">Rua João Pessoa, 480 — Bairro Centro<br>Pouso Alegre — MG · CEP 37550-000</div>
+              <div class="contato-info-value">Av. Antônio Mariosa, 4545 — Santa Angelina<br>Pouso Alegre — MG · CEP 37550-360</div>
             </div>
           </div>
 
@@ -797,21 +797,21 @@
 
           <div class="contato-info-item">
             <div class="contato-info-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2.18h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.29 6.29l.95-.95a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
             </div>
             <div>
-              <div class="contato-info-label">E-mail</div>
-              <a href="mailto:adm@pousinox.com.br" class="contato-info-value contato-info-link">adm@pousinox.com.br</a>
+              <div class="contato-info-label">Telefone</div>
+              <a href="tel:+553534238994" class="contato-info-value contato-info-link">(35) 3423-8994</a>
             </div>
           </div>
 
           <div class="contato-info-item">
             <div class="contato-info-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
             </div>
             <div>
-              <div class="contato-info-label">Horário de atendimento</div>
-              <div class="contato-info-value">Seg a Sex: 08h–18h<br>Sáb: 08h–12h</div>
+              <div class="contato-info-label">E-mail</div>
+              <a href="mailto:adm@pousinox.com.br" class="contato-info-value contato-info-link">adm@pousinox.com.br</a>
             </div>
           </div>
 
@@ -862,7 +862,42 @@
             </div>
             <div class="form-group">
               <label for="quantidade">Quantidade estimada de peças</label>
-              <input type="text" id="quantidade" name="quantidade" placeholder="Ex: 50 unidades">
+              <input type="number" id="quantidade" name="quantidade" placeholder="Ex: 50" min="1">
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="medida">Medida do porcelanato</label>
+              <select id="medida" name="medida">
+                <option value="">Selecione a medida</option>
+                <option value="30x30">30 × 30 cm</option>
+                <option value="40x40">40 × 40 cm</option>
+                <option value="45x45">45 × 45 cm</option>
+                <option value="50x50">50 × 50 cm</option>
+                <option value="60x60">60 × 60 cm</option>
+                <option value="60x120">60 × 120 cm</option>
+                <option value="80x80">80 × 80 cm</option>
+                <option value="80x160">80 × 160 cm</option>
+                <option value="90x90">90 × 90 cm</option>
+                <option value="100x100">100 × 100 cm</option>
+                <option value="120x120">120 × 120 cm</option>
+                <option value="outra">Outra medida</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="espessura">Espessura do porcelanato</label>
+              <select id="espessura" name="espessura">
+                <option value="">Selecione a espessura</option>
+                <option value="8mm">8 mm</option>
+                <option value="9mm">9 mm</option>
+                <option value="10mm">10 mm</option>
+                <option value="11mm">11 mm</option>
+                <option value="12mm">12 mm</option>
+                <option value="14mm">14 mm</option>
+                <option value="20mm">20 mm (porcelanato técnico)</option>
+                <option value="outra">Outra espessura</option>
+              </select>
             </div>
           </div>
 
