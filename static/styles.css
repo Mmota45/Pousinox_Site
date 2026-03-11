@@ -1377,9 +1377,9 @@ h1, h2, h3, h4, h5 {
 
 .produto-cards-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 32px;
-  max-width: 760px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  max-width: 1060px;
   margin: 0 auto;
 }
 
@@ -1475,6 +1475,13 @@ h1, h2, h3, h4, h5 {
   line-height: 1.5;
   margin-bottom: 16px;
   min-height: 64px;
+}
+
+@media (max-width: 860px) {
+  .produto-cards-grid {
+    grid-template-columns: 1fr 1fr;
+    max-width: 680px;
+  }
 }
 
 @media (max-width: 600px) {
@@ -1871,6 +1878,11 @@ h1, h2, h3, h4, h5 {
   grid-template-columns: 2fr 1fr 1fr;
   gap: 40px;
   margin-bottom: 28px;
+}
+
+.produto-badge-acess {
+  background: linear-gradient(135deg, #2e3138, #6b7280);
+  color: #f1f1f1;
 }
 
 .footer-logo-wrap {
