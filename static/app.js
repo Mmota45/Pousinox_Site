@@ -219,29 +219,37 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // Decimal counters (e.g. 0.8mm)
   const decimalCounters = document.querySelectorAll('[data-counter-decimal]');
-  if (decimalCounters.length && 'IntersectionObserver' in window) {
-    const decObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          const target = parseFloat(entry.target.getAttribute('data-counter-decimal'));
-          const duration = 1500;
-          const steps = duration / 16;
-          const step = target / steps;
-          let current = 0;
-          const timer = setInterval(() => {
-            current += step;
-            if (current >= target) {
-              entry.target.textContent = target.toLocaleString('pt-BR', {minimumFractionDigits: 1, maximumFractionDigits: 1});
-              clearInterval(timer);
-            } else {
-              entry.target.textContent = current.toLocaleString('pt-BR', {minimumFractionDigits: 1, maximumFractionDigits: 1});
-            }
-          }, 16);
-          decObserver.unobserve(entry.target);
-        }
+  if (decimalCounters.length) {
+    function animateDecimalCounter(el, target, duration) {
+      const startTime = performance.now();
+      function update(now) {
+        const elapsed = now - startTime;
+        const progress = Math.min(elapsed / duration, 1);
+        const current = progress * target;
+        el.textContent = current.toLocaleString('pt-BR', { minimumFractionDigits: 1, maximumFractionDigits: 1 });
+        if (progress < 1) requestAnimationFrame(update);
+        else el.textContent = target.toLocaleString('pt-BR', { minimumFractionDigits: 1, maximumFractionDigits: 1 });
+      }
+      requestAnimationFrame(update);
+    }
+
+    if ('IntersectionObserver' in window) {
+      const decObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const target = parseFloat(entry.target.getAttribute('data-counter-decimal'));
+            animateDecimalCounter(entry.target, target, 1500);
+            decObserver.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.3 });
+      decimalCounters.forEach(el => decObserver.observe(el));
+    } else {
+      decimalCounters.forEach(el => {
+        const target = parseFloat(el.getAttribute('data-counter-decimal'));
+        el.textContent = target.toLocaleString('pt-BR', { minimumFractionDigits: 1, maximumFractionDigits: 1 });
       });
-    }, { threshold: 0.5 });
-    decimalCounters.forEach(el => decObserver.observe(el));
+    }
   }
 
   /* ---- VIDEO PLACEHOLDER CLICK ---- */
