@@ -760,6 +760,18 @@ h1, h2, h3, h4, h5 {
   background: rgba(67, 56, 202, 0.18);
 }
 
+[data-risco="acidente"] .problema-card-icon {
+  color: #dc2626;
+  background: rgba(220, 38, 38, 0.1);
+}
+[data-risco="acidente"]:hover {
+  border-color: rgba(220, 38, 38, 0.4) !important;
+  box-shadow: 0 12px 36px rgba(220, 38, 38, 0.15) !important;
+}
+[data-risco="acidente"]:hover .problema-card-icon {
+  background: rgba(220, 38, 38, 0.18);
+}
+
 .problema-card h3 {
   font-size: 0.95rem;
   color: #111111;
