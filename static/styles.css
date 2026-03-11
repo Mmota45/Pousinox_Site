@@ -2639,6 +2639,10 @@ h1, h2, h3, h4, h5 {
 .section-faq .section-subtitle,
 .section-faq .section-tag {
   text-align: center;
+  display: block;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .faq-list {
