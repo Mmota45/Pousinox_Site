@@ -296,7 +296,7 @@ h1, h2, h3, h4, h5 {
 .hamburger span {
   width: 24px;
   height: 2px;
-  background: #0a0a0a !important;
+  background: #111827 !important;
   border-radius: 2px;
   transition: var(--transition);
 }
@@ -2237,6 +2237,13 @@ h1, h2, h3, h4, h5 {
 
   .hamburger {
     display: flex;
+  }
+
+  .hamburger span {
+    background: #1a1a1a !important;
+    opacity: 1 !important;
+    height: 3px !important;
+    width: 26px !important;
   }
 
   .navbar-cta .btn {
