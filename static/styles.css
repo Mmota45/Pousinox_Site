@@ -2720,15 +2720,17 @@ h1, h2, h3, h4, h5 {
 }
 
 .faq-answer {
-  max-height: 0;
-  overflow: hidden;
-  padding: 0 24px;
-  transition: max-height 0.3s ease, padding 0.3s ease;
+  max-height: 0 !important;
+  overflow: hidden !important;
+  padding: 0 24px !important;
+  transition: max-height 0.35s ease, padding 0.35s ease;
+  visibility: hidden;
 }
 
 .faq-answer.open {
-  max-height: 600px;
-  padding: 0 24px 22px;
+  max-height: 800px !important;
+  padding: 0 24px 22px !important;
+  visibility: visible;
 }
 
 .faq-answer p {
