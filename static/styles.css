@@ -1392,11 +1392,14 @@ h1, h2, h3, h4, h5 {
 .section-produto {
   min-height: 100vh;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  align-items: center;
   padding: 80px 0;
   box-sizing: border-box;
   background: #ffffff;
+}
+
+.section-produto > .container {
+  width: 100%;
 }
 
 .produto-cards-grid {
