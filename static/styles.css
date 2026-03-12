@@ -2236,14 +2236,7 @@ h1, h2, h3, h4, h5 {
   }
 
   .hamburger {
-    display: flex;
-  }
-
-  .hamburger span {
-    background: #1a1a1a !important;
-    opacity: 1 !important;
-    height: 3px !important;
-    width: 26px !important;
+    display: flex !important;
   }
 
   .navbar-cta .btn {
