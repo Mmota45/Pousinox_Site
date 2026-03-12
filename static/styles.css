@@ -303,14 +303,15 @@ h1, h2, h3, h4, h5 {
 
 /* ============ HERO ============ */
 .hero {
-  min-height: auto;
+  min-height: 100vh;
   background: linear-gradient(160deg, #080a0e 0%, #0f1318 50%, #141920 100%);
   position: relative;
   overflow: visible;
   display: flex;
   align-items: center;
   padding-top: 80px;
-  padding-bottom: 80px;
+  padding-bottom: 60px;
+  box-sizing: border-box;
 }
 
 .hero::before {
